@@ -186,7 +186,8 @@ export class HomePage {
                 console.log("redio val =====>",this.value)
                 if(this.value == 'scan'){
                     this.scan();
-                }else if(this.value == 'code'){
+                }
+                else if(this.value == 'code'){
                     this.navCtrl.push(CoupanCodePage)
                 }
                 
