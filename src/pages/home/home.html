@@ -80,7 +80,7 @@
                 
             </div>
 
-            <button class="capitalize" ion-button icon-start round block color="secondary" (click)="scanCoupon()">
+            <button class="capitalize" ion-button icon-start round block color="secondary" (click)="scan()">
                 <ion-icon name="qr-scanner"></ion-icon>
                 {{'Scan QR Code' | translate}}
               </button>
@@ -168,6 +168,21 @@
                 </ion-icon>
                 {{'Super 30' | translate}}
             </ion-item>
+
+
+
+
+            <ion-item class="transparent" (click)=" EnterCouponCode();">
+                <ion-icon item-start color="primary">
+                    <img src="assets/navigation/coupon_code.jpg" class="img_cou">
+
+                </ion-icon>
+                {{'Enter Coupon Code' | translate}}
+            </ion-item>
+
+
+
+
             <ion-item class="transparent" (click)="goAboutPage();">
                 <ion-icon item-start color="primary">
                     <img src="assets/navigation/about.svg">
