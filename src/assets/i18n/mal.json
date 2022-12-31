@@ -19,9 +19,9 @@
     "New Arrivals":"പുതുതായി എത്തിച്ചേര്ന്നവ",
     "Notification":"അറിയിപ്പ്",
     "Scan":"സ്കാൻ ചെയ്യുക",
-    "Scan History":"ചരിത്രം സ്കാൻ ചെയ്യുക",
+    "Scan History":"ഹിസ്റ്ററി",
     "Gift Gallery":"ഗിഫ്റ്റ് ഗാലറി",
-    "Redeem My Points":"എന്റെ പോയിന്റുകൾ വീണ്ടെടുക്കുക",
+    "Redeem My Points":"റെഡീം അഭ്യർത്ഥന",
     "Gift Tracker":"ഗിഫ്റ്റ് ട്രാക്കർ",
     "Digital catalogues":"ഡിജിറ്റൽ കാറ്റലോഗുകൾ",
     "Chat with us":"ഞങ്ങളുമായി ചാറ്റുചെയ്യുക",
@@ -258,8 +258,12 @@
 	"Redeem Your Reward Points":"നിങ്ങളുടെ റിവാർഡ് പോയിന്റുകൾ റിഡീം ചെയ്യുക",
 	"Catalogues":"കാറ്റലോഗുകൾ",
 	"SCHEME":"സ്കീം",
-	"Home":"വീട്",
+	"Home":"ഹോം",
 	"Scheme":"സ്കീം",
+	"Schemes":"സ്കീമുകൾ",
+	
+
+
 	"Super 30":"സൂപ്പർ 30",
 
 

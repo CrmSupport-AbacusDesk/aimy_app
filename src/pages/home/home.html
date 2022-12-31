@@ -13,7 +13,13 @@
         <div class="company-logo">
             <img src="assets/imgs/logo.png">
         </div>
-        <button ion-button color="light" (click)="Super30Page()" outline>{{'Super 30' | translate}}  </button>
+      
+
+         <ion-buttons end  color="tertiary">  
+            <button ion-button icon-only (click)="Super30Page()">
+                <img src="assets/imgs/super.png">
+            </button>
+        </ion-buttons>
         <!-- <br> -->
 
         <ion-buttons end class="mr10 ">
@@ -80,7 +86,7 @@
                 
             </div>
 
-            <button class="capitalize" ion-button icon-start round block color="secondary" (click)="scan()">
+            <button class="capitalize" ion-button icon-start round block color="white" (click)="scan()">
                 <ion-icon name="qr-scanner"></ion-icon>
                 {{'Scan QR Code' | translate}}
               </button>
@@ -98,113 +104,124 @@
 
 <div class="sidebar"  [ngClass] ="{'active' : toggle == true}"  (click)="toggleValue('true')">
     <div class="side-menu">
-        <ion-list>
-            <ion-item class="transparent" (click)="goOnDigitalcatalogPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/book.svg">
-                </ion-icon>
-                {{'Catalogues' | translate}}
-            </ion-item>
+      
 
-            <ion-item class="transparent" (click)="goOnOffersListPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/offer.svg">
-                </ion-icon>
-                {{'SCHEME' | translate}}
-            </ion-item>
+<ion-list>
 
-            <ion-item class="transparent" (click)="goOnGiftGallary();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/gift.svg">
-                </ion-icon>
-                {{'Gift Gallery' | translate}}
-            </ion-item>
+    <ion-item class="transparent" (click)="viewProfie();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/person.svg">
 
+        </ion-icon>
+        {{'Profile' | translate}}
+    </ion-item>
 
-            <ion-item class="transparent" (click)="goOnRedeemListPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/redeem.svg">
-                </ion-icon>
-                {{'Redeem My Points' | translate}}
-            </ion-item>
-            
+    <ion-item class="transparent" (click)="goOnRedeemListPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/redeem.svg">
+        </ion-icon>
+        {{'Redeem My Points' | translate}}
+    </ion-item>
+    
 
-            <ion-item class="transparent" (click)="gotoHistory();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/swap_horiz.svg">
+    <ion-item class="transparent" (click)="goOnGiftGallary();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/gift.svg">
+        </ion-icon>
+        {{'Gift Gallery' | translate}}
+    </ion-item>
 
-                </ion-icon>
-                {{'Gift Tracker' | translate}}
-            </ion-item>
+    <ion-item class="transparent" (click)="gotoHistory();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/swap_horiz.svg">
+
+        </ion-icon>
+        {{'Gift Tracker' | translate}}
+    </ion-item>
 
 
-                <ion-item class="transparent" (click)="goOnFeedbackPage()">
-                    <ion-icon item-start color="primary">
-                        <img src="assets/navigation/chat.svg">
+    <ion-item class="transparent" (click)=" EnterCouponCode();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/coupon_code.jpg" class="img_cou">
 
-                    </ion-icon>
-                    {{'Chat with us' | translate}}
-                </ion-item>
+        </ion-icon>
+        {{'Enter Coupon Code' | translate}}
+    </ion-item>
 
-
-            <ion-item class="transparent" (click)="goOnVideoPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/video.svg">
-
-                </ion-icon>
-                {{'Videos' | translate}}
-            </ion-item>
-
-            <ion-item class="transparent" (click)="goOnfaqPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/faq.svg">
-                </ion-icon>
-                {{'FAQ' | translate}}
-            </ion-item>
-            <ion-item class="transparent" (click)="Super30Page();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/person.svg">
-
-                </ion-icon>
-                {{'Super 30' | translate}}
-            </ion-item>
+    <ion-item class="transparent" (click)="goOnOffersListPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/offer.svg">
+        </ion-icon>
+        {{'Schemes' | translate}}
+    </ion-item>
 
 
+    <ion-item class="transparent" (click)="goOnDigitalcatalogPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/book.svg">
+        </ion-icon>
+        {{'Catalogues' | translate}}
+    </ion-item>
 
 
-            <ion-item class="transparent" (click)=" EnterCouponCode();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/coupon_code.jpg" class="img_cou">
+    <ion-item class="transparent" (click)="goOnVideoPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/video.svg">
 
-                </ion-icon>
-                {{'Enter Coupon Code' | translate}}
-            </ion-item>
-
-
+        </ion-icon>
+        {{'Videos' | translate}}
+    </ion-item>
 
 
-            <ion-item class="transparent" (click)="goAboutPage();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/about.svg">
+    <ion-item class="transparent" (click)="gotoChangeLang();">
+        <ion-icon item-start color="primary">
+            <div class="test_img">
+                <img src="assets/navigation/translate.png">
 
-                </ion-icon>
-                {{'About Us' | translate}}
-            </ion-item>
+            </div>
 
-            <ion-item class="transparent" (click)="goOnContact();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/phone.svg">
+        </ion-icon>
+        {{'Change Language' | translate}}
+    </ion-item>
 
-                </ion-icon>
-                {{'Contact Us' | translate}}
-            </ion-item>
-            <ion-item class="transparent" (click)="viewProfie();">
-                <ion-icon item-start color="primary">
-                    <img src="assets/navigation/person.svg">
+    <ion-item class="transparent" (click)="goOnfaqPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/faq.svg">
+        </ion-icon>
+        {{'FAQ' | translate}}
+    </ion-item>
 
-                </ion-icon>
-                {{'Profile' | translate}}
-            </ion-item>
-        </ion-list>
+    <ion-item class="transparent" (click)="goOnFeedbackPage()">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/chat.svg">
+
+        </ion-icon>
+        {{'Chat with us' | translate}}
+    </ion-item>
+
+
+    <ion-item class="transparent" (click)="goAboutPage();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/about.svg">
+
+        </ion-icon>
+        {{'About Us' | translate}}
+    </ion-item>
+    <ion-item class="transparent" (click)="goOnContact();">
+        <ion-icon item-start color="primary">
+            <img src="assets/navigation/phone.svg">
+
+        </ion-icon>
+        {{'Contact Us' | translate}}
+    </ion-item>
+</ion-list>
+
+
+
+
+
+
+
+
     </div>
 </div>
