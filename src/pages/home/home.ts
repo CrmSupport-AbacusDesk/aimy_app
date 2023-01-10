@@ -552,7 +552,7 @@ export class HomePage {
         let alert = this.alertCtrl.create({
             title:'Sorry!',
             cssClass:'action-close status-alert',
-            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:9650100908>9650100908</a>.",
+            subTitle:"Your current profile status is not <strong class=Approved>“Verified”</strong>.To know more, you can call us at <a href=tel:7558836538>7558836538</a>.",
             buttons: [
                 {
                     text: 'Okay',
