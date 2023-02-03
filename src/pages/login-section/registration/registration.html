@@ -67,11 +67,14 @@
             
             <div class="cs-form">
                 <ion-list>
+
+                    <div class="hshsh" *ngIf="data.id">
+
                     <ion-item class="cs-input" [ngClass]="{'error':f.submitted && company_name?.invalid}" *ngIf="data.user_type=='2' || data.user_type=='3'">
                         <ion-label floating>{{'Company Name' | translate}}.*</ion-label>
                         <ion-input type="text" name="company_name" #company_name="ngModel" [(ngModel)]="data.company_name" required (keypress)="namecheck($event)"></ion-input>
                     </ion-item>
-                    
+                    </div>
                     <ion-item class="cs-input" [ngClass]="{'error':f.submitted && mobile_no?.invalid}">
                         <ion-label floating>{{'Mobile No' | translate}}.*</ion-label>
                         <ion-input type="number" name="mobile_no" #mobile_no="ngModel" [(ngModel)]="data.mobile_no" required (keypress)="MobileNumber($event)" readonly></ion-input>
@@ -84,7 +87,7 @@
                     
                     
                     <!--//////////////// importaint //////////////-->
-                    
+                    <div class="hshsh" *ngIf="data.id">
                     <ion-item class="cs-input" [ngClass]="{'error':(f.submitted && email?.invalid) || (f.submitted && !email.valid)}">
                         <ion-label floating>{{'Email ID (optional)' | translate}}</ion-label>
                         <ion-input type="text" type="text" name="email" #email="ngModel" [(ngModel)]="data.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></ion-input>
@@ -95,6 +98,7 @@
                         <ion-datetime displayFormat="DD/MM/YYYY" max={{today_date}} type="text" name="dob" #dob="ngModel" [(ngModel)]="data.dob">
                         </ion-datetime>
                     </ion-item>
+                    </div>
                 </ion-list>
             </div>
         </div>
@@ -142,6 +146,9 @@
         </div>
         <!-- /////// Importaint //////////// -->
         
+
+        <div class="hshsh" *ngIf="data.id">
+
         <div class="heading line">
             <p>{{'Document Information' | translate}}</p>
         </div>
@@ -185,9 +192,9 @@
             </div>
         </div>
         
+        </div>
         
-        
-        
+        <div class="hshsh" *ngIf="data.id">
         <ng-container *ngIf="data.user_type=='1'">
             <div class="heading line" >
                 <p >{{'Dealer Information' | translate}}</p>
@@ -218,10 +225,12 @@
                 </div>
             </div>
         </ng-container>
+        </div>
         
-        
-        
-        <div class="heading line">
+        <div class="hshsh" *ngIf="data.id">
+
+       
+        <div class="heading line" >
             <p>{{'Bank Information' | translate}}</p>
         </div>
         <div class="ragistration-fields">
@@ -252,6 +261,14 @@
                 </ion-list>
             </div>
         </div>
+
+    </div>
+
+
+
+
+
+
         <ng-container *ngIf="!data.id">
             <div class="heading line">
                 <p>{{'Referral Code' | translate}}</p>

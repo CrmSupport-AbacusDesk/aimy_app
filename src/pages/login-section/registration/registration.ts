@@ -48,7 +48,6 @@ export class RegistrationPage {
         this.data.cheque_image='';
         
 
-
         this.data.user_type=1;
         this.getstatelist();
         this.today_date = new Date().toISOString().slice(0,10);
@@ -67,6 +66,9 @@ export class RegistrationPage {
             this.data.doc_back_edit_id = this.data.id;
             this.data.cheque_image_id = this.data.id;
 
+
+           
+          
 
             // this.data.profile= this.data.profile;
             // this.data.document_image = this.data.document_image
