@@ -20,9 +20,12 @@ export class RedeemTypePage {
   
   walletBal:any;
   data:any={};
-  cashLimit:any ={};
+  cashLimit_electrician:any ={};
+  cashLimit_dealer:any ={};
+
   formData= new FormData();
   redeem_point:any;
+  user_type: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl:AlertController,  public modalCtrl: ModalController, public service:DbserviceProvider) {
     console.log(navParams);
@@ -31,6 +34,8 @@ export class RedeemTypePage {
     this.walletBal = navParams.data.balance_point;
     this.redeem_point = navParams.data.redeem_point;
     this.karigar_detail = navParams.data.Status;
+    this.user_type = navParams.data.user_type;
+
     console.log(this.karigar_detail);
     
 
@@ -45,8 +50,9 @@ export class RedeemTypePage {
     {
       this.service.post_rqst({},'app_karigar/cash_limit').subscribe( (r) =>{ 
         console.log(r);
-        this.cashLimit = r.limit
-        console.log(this.cashLimit);
+        this.cashLimit_electrician = r.limit_electrician;
+        this.cashLimit_dealer = r.limit_dealer;
+
         
       });
     }
@@ -111,11 +117,22 @@ karigar_detail:any ={}
         this.showAlert( 'insufficient points to redeem');
         return
       }
+console.log(this.user_type);
 
-      else if(this.data.redeem_amount < this.cashLimit){
-        this.showAlert( 'You must have at least ' + this.cashLimit + ' points in your wallet to redeem cash');
-        return
+      if(this.user_type == 1){
+         if(this.data.redeem_amount < this.cashLimit_electrician){
+          this.showAlert( 'You must have at least ' + this.cashLimit_electrician + ' points in your wallet to redeem cash');
+          return
+        }
       }
+     
+
+      if(this.user_type == 2){
+        if(this.data.redeem_amount < this.cashLimit_dealer){
+         this.showAlert( 'You must have at least ' + this.cashLimit_dealer + ' points in your wallet to redeem cash');
+         return
+       }
+     }
 
       let contactModal = this.modalCtrl.create(CancelpolicyModalPage,{'karigar_id':this.service.karigar_id, 'redeem_type':this.data.redeem_type, 'redeem_point':this.data.redeem_amount});
       contactModal.present();

@@ -575,12 +575,12 @@ export class HomePage {
         this.alert1();
         return 
     }
+    this.navCtrl.push(RedeemTypePage,{'mode':'home',"balance_point":this.total_balance_point, "redeem_point":this.karigar_detail.redeem_balance, "Status":this.karigar_detail.status,"user_type":this.karigar_detail.user_type});
        
-       else if(this.karigar_detail.user_type == '1'){
-            this.navCtrl.push(RedeemTypePage,{'mode':'home',"balance_point":this.total_balance_point, "redeem_point":this.karigar_detail.redeem_balance, "Status":this.karigar_detail.status});
-        }else{
-            this.navCtrl.push(GiftListPage)
-        }
+    //    else if(this.karigar_detail.user_type == '1'){
+    //     }else{
+    //         this.navCtrl.push(GiftListPage)
+    //     }
         
     }
     goOnVideoPage()
